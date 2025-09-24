@@ -1,14 +1,23 @@
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
-
+/* Make body a column flex container */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
   margin: 0;
   font-family: 'Baloo 2', sans-serif;
-  background-color: #bde0f6; /* light blue */
+  background-color: #bde0f6;
   color: #222;
   text-align: center;
 }
 
+/* Main content grows to fill remaining space */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling */
 header {
   background-color: #ffd43b; /* yellow */
   position: sticky;
@@ -20,12 +29,11 @@ header {
 }
 
 .logo {    
-    height: 7rem;
-    padding-left: 0.5%;
-    padding-bottom: 0.5%;
-    padding-top: 0.5%; 
+  height: 7rem;
+  padding: 0.5%;
 }
 
+/* Navigation links */
 nav a {
   margin: 0 15px;
   text-decoration: none;
@@ -36,36 +44,6 @@ nav a {
 
 nav a:hover {
   color: #ff7f11; /* orange hover */
-}
-
-section {
-  padding: 80px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-h1, h2 {
-  color: #222;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #ffd43b;
-  padding: 12px 24px;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #222;
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #ff7f11;
-  transform: scale(1.1);
 }
 
 /* Hero section */
@@ -103,8 +81,26 @@ h1 {
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #ffd43b;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff7f11;
+  transform: scale(1.1);
+}
+
+/* Footer */
 footer {
   background-color: #ffd43b;
-  margin-top: 50px;
-  padding: 20px; 
+  padding: 20px;
+  margin-top: auto; /* key: pushes footer to bottom */
 }
