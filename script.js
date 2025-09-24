@@ -1,18 +1,20 @@
-// Function to load external HTML into an element
-function loadHTML(id, file) {
-  fetch(file)
+// script.js
+
+// Function to load HTML into a div
+function loadHTML(elementId, url) {
+  fetch(url)
     .then(response => {
-      if (!response.ok) throw new Error(`Could not load ${file}`);
+      if (!response.ok) throw new Error('Network response was not ok');
       return response.text();
     })
     .then(data => {
-      document.getElementById(id).innerHTML = data;
+      document.getElementById(elementId).innerHTML = data;
     })
-    .catch(error => console.error(error));
+    .catch(error => {
+      console.error('Error loading HTML:', error);
+    });
 }
 
-// Load header and footer automatically
-document.addEventListener("DOMContentLoaded", () => {
-  loadHTML("header-placeholder", "header.html");
-  loadHTML("footer-placeholder", "footer.html");
-});
+// Load header and footer
+loadHTML('header', 'header.html');
+loadHTML('footer', 'footer.html');
