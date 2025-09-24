@@ -11,7 +11,7 @@ body {
 
 header {
   background-color: #ffd43b; /* yellow */
-  padding: 20px;
+  /* padding: 20px; */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -20,8 +20,10 @@ header {
   justify-content: space-between;
 }
 
-.logo {
-  height: 200px;
+.logo {    
+    height: 112px;
+    padding-left: 0.5%;
+    padding-bottom: 0.5%;
 }
 
 nav a {
