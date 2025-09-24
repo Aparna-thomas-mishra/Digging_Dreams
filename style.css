@@ -46,16 +46,40 @@ nav a:hover {
   color: #ff7f11; /* orange hover */
 }
 
-/* Hero section */
+/* Hero section with full-page background */
 #hero {
   padding: 120px 20px;
-  background: url("images/welcome-bg.jpg") no-repeat center center/cover;
-  color: #222;
+  background: url("images/hero-bg.jpg") no-repeat center center/cover;
+  color: white; /* text color for contrast */
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+/* About Us section in white */
+.about {
+  background-color: white;
+  color: #222;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
 /* Interactive cards */
