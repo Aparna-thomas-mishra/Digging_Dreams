@@ -19,7 +19,7 @@ main {
 
 /* Header styling */
 header {
-  background-color: #ffd43b; /* yellow */
+  background-color: #ffd43b; /* yellow */ 
   position: sticky;
   top: 0;
   z-index: 1000;
