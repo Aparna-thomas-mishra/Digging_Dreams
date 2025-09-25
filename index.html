@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Digging Dreams</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; }
-    nav { background: #333; color: #fff; padding: 1em 0; text-align: center; }
-    nav a { color: #fff; margin: 0 1em; text-decoration: none; }
     section { padding: 60px 20px; }
     .home { background: #f7f7f7; }
     .about { background: #e0e0e0; }
@@ -18,18 +16,14 @@
     .pricing-table { width: 100%; border-collapse: collapse; margin-top: 1em; }
     .pricing-table th, .pricing-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
     .pricing-table th { background: #333; color: #fff; }
-    footer { text-align: center; padding: 2em 0; background: #333; color: #fff; }
     html { scroll-behavior: smooth; }
+    .logo { max-width: 120px; vertical-align: middle; }
+    nav a { margin: 0 1em; text-decoration: none; }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#play">Play Zone</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- Header will be loaded here -->
+  <div id="header"></div>
 
   <section id="home" class="home">
     <h1>Welcome to Digging Dreams</h1>
@@ -96,8 +90,34 @@
     </form>
   </section>
 
-  <footer>
-    &copy; 2025 Digging Dreams. All rights reserved.
-  </footer>
+  <!-- Footer will be loaded here -->
+  <div id="footer"></div>
+
+  <!-- Script to load header and footer dynamically -->
+  <script src="script.js"></script>
+  <script>
+    // Navigation links in header.html use separate pages, so let's update them to scroll on single page
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        const navLinks = document.querySelectorAll('#header nav a');
+        const linkMap = {
+          'index.html': '#home',
+          'about.html': '#about',
+          'play.html': '#play',
+          'pricing.html': '#pricing'
+        };
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (linkMap[href]) {
+            link.setAttribute('href', linkMap[href]);
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              document.querySelector(linkMap[href]).scrollIntoView({ behavior: 'smooth' });
+            });
+          }
+        });
+      }, 500); // slight delay to ensure header is loaded
+    });
+  </script>
 </body>
 </html>
