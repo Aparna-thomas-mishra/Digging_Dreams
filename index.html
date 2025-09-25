@@ -2,122 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <title>Digging Dreams</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
-    section { padding: 60px 20px; }
-    .home { background: #f7f7f7; }
-    .about { background: #e0e0e0; }
-    .play { background: #f0f8ff; }
-    .pricing { background: #e9f5e1; }
-    .contact { background: #f7f7f7; }
-    .pricing-table { width: 100%; border-collapse: collapse; margin-top: 1em; }
-    .pricing-table th, .pricing-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    .pricing-table th { background: #333; color: #fff; }
-    html { scroll-behavior: smooth; }
-    .logo { max-width: 120px; vertical-align: middle; }
-    nav a { margin: 0 1em; text-decoration: none; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Digging Dreams</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header will be loaded here -->
+  <!-- Header placeholder -->
   <div id="header"></div>
 
-  <section id="home" class="home">
-    <h1>Welcome to Digging Dreams</h1>
-    <p>Your journey starts here. Discover your dreams and start digging!</p>
-  </section>
+  <!-- Main content -->
+  <main>
+    <!-- Hero section -->
+    <section id="hero" class="hero">
+      <h1>Welcome to Digging Dreams</h1>
+      <p>Where fun and imagination come to life!</p>
+      <a href="#about" class="btn">Learn More</a>
+    </section>
 
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>We help people find their passion and pursue their dreams. Digging Dreams is all about making your aspirations a reality.</p>
-  </section>
+    <!-- About Us section -->
+    <section id="about" class="about">
+      <div class="about-container">
+        <h2>About Us</h2>
+        <p>
+          Digging Dreams is all about creativity, imagination, and fun activities for everyone.
+          We aim to inspire and bring joy to our community through unique experiences and interactive projects.
+        </p>
+      </div>
+    </section>
 
-  <section id="play" class="play">
-    <h1>Play Zone</h1>
-    <p>
-      Our Play Zone is designed for kids of all ages to jump, climb, and 
-      discover new adventures. From soft play areas to obstacle courses, 
-      there’s something for everyone.
-    </p>
-    <ul>
-      <li>Safe and secure play areas</li>
-      <li>Creative activity corners</li>
-      <li>Interactive games and puzzles</li>
-      <li>Separate toddler zone</li>
-    </ul>
-  </section>
+    <!-- Example interactive cards -->
+    <section id="cards" class="cards">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+    </section>
+  </main>
 
-  <section id="pricing" class="pricing">
-    <h1>Pricing</h1>
-    <p>Choose from our affordable packages designed for families and groups.</p>
-    <table class="pricing-table">
-      <tr>
-        <th>Package</th>
-        <th>Price</th>
-        <th>Details</th>
-      </tr>
-      <tr>
-        <td>Single Entry</td>
-        <td>$15</td>
-        <td>One-time access to all play zones</td>
-      </tr>
-      <tr>
-        <td>Family Pack</td>
-        <td>$50</td>
-        <td>2 adults + 2 kids, unlimited playtime</td>
-      </tr>
-      <tr>
-        <td>Monthly Pass</td>
-        <td>$120</td>
-        <td>Unlimited access for 30 days</td>
-      </tr>
-    </table>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <form>
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name"><br>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email"><br>
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message"></textarea><br>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <!-- Footer will be loaded here -->
+  <!-- Footer placeholder -->
   <div id="footer"></div>
 
-  <!-- Script to load header and footer dynamically -->
+  <!-- Script to dynamically load header and footer -->
   <script src="script.js"></script>
-  <script>
-    // Navigation links in header.html use separate pages, so let's update them to scroll on single page
-    document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        const navLinks = document.querySelectorAll('#header nav a');
-        const linkMap = {
-          'index.html': '#home',
-          'about.html': '#about',
-          'play.html': '#play',
-          'pricing.html': '#pricing'
-        };
-        navLinks.forEach(link => {
-          const href = link.getAttribute('href');
-          if (linkMap[href]) {
-            link.setAttribute('href', linkMap[href]);
-            link.addEventListener('click', function(e) {
-              e.preventDefault();
-              document.querySelector(linkMap[href]).scrollIntoView({ behavior: 'smooth' });
-            });
-          }
-        });
-      }, 500); // slight delay to ensure header is loaded
-    });
-  </script>
 </body>
 </html>
