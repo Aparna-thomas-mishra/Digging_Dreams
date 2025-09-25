@@ -1,4 +1,4 @@
-/* Make body a column flex container */ 
+/* General body setup */
 body {
   display: flex;
   flex-direction: column;
@@ -46,8 +46,9 @@ nav a:hover {
   color: #ff7f11; /* orange hover */
 }
 
-/* Hero section with full-page background */
+/* Hero section with background image + faded overlay */
 #hero {
+  position: relative;
   padding: 120px 20px;
   background: url("images/Index_pic.png") no-repeat center center/cover;
   color: white; /* text color for contrast */
@@ -57,11 +58,23 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
+  z-index: 1;
 }
 
-/* About Us section in white */
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* fade effect */
+  z-index: -1;
+}
+
+/* About Us section */
 .about {
-  background-color: rgba(255, 255, 255, 0.95); /* slightly transparent for elegance */
+  background-color: rgba(255, 255, 255, 0.95); /* slightly transparent */
   color: #222;
   padding: 80px 20px;
   text-align: center;
@@ -90,6 +103,7 @@ nav a:hover {
   justify-content: center;
   gap: 20px;
   margin-top: 40px;
+  padding: 40px 20px;
 }
 
 .card {
