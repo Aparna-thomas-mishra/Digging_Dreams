@@ -3,47 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome | Digging Dreams</title>
+  <title>Digging Dreams — Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header placeholder -->
-  <div id="header"></div>
+  
+  <!-- include header (if using server-side include or templating) -->
+  <!-- e.g. --> 
+  <!-- #include "header.html" -->
+  <div class="site-header">
+    <!-- your header content or include here -->
+  </div>
 
-  <!-- Main content -->
   <main>
-    <!-- Hero section -->
-    <section id="hero" class="hero">
-      <div class="hero-content">
-        <h1>Welcome to Digging Dreams</h1>
-        <p>Where fun and imagination come to life!</p>
-        <a href="#about" class="btn">Learn More</a>
-      </div>
+    <section class="hero">
+      <h1>Welcome to Digging Dreams</h1>
+      <p>Explore fun, creative activities tailored for every kid.</p>
+      <a href="#activities" class="btn-primary">Explore Activities</a>
     </section>
 
-    <!-- About Us section -->
-    <section id="about" class="about">
-      <div class="about-container">
-        <h2>About Us</h2>
-        <p>
-          Digging Dreams is all about creativity, imagination, and fun activities for everyone.
-          We aim to inspire and bring joy to our community through unique experiences and interactive projects.
-        </p>
-      </div>
-    </section>
+    <section id="activities" class="activities">
+      <h2>Available Activities</h2>
+      <div class="activity-list">
 
-    <!-- Example interactive cards -->
-    <section id="cards" class="cards">
-      <div class="card">Card 1</div>
-      <div class="card">Card 2</div>
-      <div class="card">Card 3</div>
+        <div class="activity-card">
+          <h3>Dance</h3>
+          <div class="details">
+            <p>Get moving with dance classes that bring joy and energy.</p>
+            <p><strong>Rate:</strong> $20/hr</p>
+            <p><strong>Timings:</strong> 10:00am – 6:00pm</p>
+            <p><strong>Age:</strong> 5-12 yrs</p>
+          </div>
+          <div class="actions">
+            <button>Book Now</button>
+            <a href="#" class="waiver">Sign Waiver</a>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <h3>Art</h3>
+          <div class="details">
+            <p>Let imagination soar with painting, crafts, and more.</p>
+            <p><strong>Rate:</strong> $15/hr</p>
+            <p><strong>Timings:</strong> 11:00am – 5:00pm</p>
+            <p><strong>Age:</strong> 4-10 yrs</p>
+          </div>
+          <div class="actions">
+            <button>Book Now</button>
+            <a href="#" class="waiver">Sign Waiver</a>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <h3>Robotics</h3>
+          <div class="details">
+            <p>Build, program, and explore robotics in a fun way.</p>
+            <p><strong>Rate:</strong> $25/hr</p>
+            <p><strong>Timings:</strong> 12:00pm – 4:00pm</p>
+            <p><strong>Age:</strong> 8-14 yrs</p>
+          </div>
+          <div class="actions">
+            <button>Book Now</button>
+            <a href="#" class="waiver">Sign Waiver</a>
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
 
-  <!-- Footer placeholder -->
-  <div id="footer"></div>
-
-  <!-- Script to dynamically load header and footer -->
-  <script src="script.js"></script>
+  <!-- include footer -->
+  <div class="site-footer">
+    <!-- your footer content (contact, copyright) -->
+  </div>
+  
 </body>
 </html>
