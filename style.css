@@ -10,7 +10,7 @@ body {
   background-color: #bde0f6;
   color: #222;
   text-align: center;
-}
+} 
 
 main {
   flex: 1;                 /* Grow to fill space between header & footer */
