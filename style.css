@@ -1,35 +1,31 @@
-/* --------------------
-   Global Styles
---------------------- */
+/* Make body a column flex container */ 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;       /* Full viewport height */
+  min-height: 100vh; /* full viewport height */
   margin: 0;
   font-family: 'Baloo 2', sans-serif;
   background-color: #bde0f6;
   color: #222;
   text-align: center;
-} 
+}
 
+/* Main content grows to fill remaining space */
 main {
-  flex: 1;                 /* Grow to fill space between header & footer */
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* --------------------
-   Header & Navigation
---------------------- */
+/* Header styling */
 header {
-  background-color: #ffd43b; /* Yellow bar */
+  background-color: #ffd43b; /* yellow */ 
   position: sticky;
   top: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
 }
 
 .logo {    
@@ -37,49 +33,35 @@ header {
   padding: 0.5%;
 }
 
+/* Navigation links */
 nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: 600;
   color: #222;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #ff7f11; /* Orange hover */
+  color: #ff7f11; /* orange hover */
 }
 
-/* --------------------
-   Hero Section
---------------------- */
+/* Hero section with full-page background */
 #hero {
-  position: relative;
-  min-height: 80vh;
   padding: 120px 20px;
+  background: url("images/Index_pic.png") no-repeat center center/cover;
+  color: white; /* text color for contrast */
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-
-  background: url("images/Index_pic.png") no-repeat center center/cover;
-  color: white;
-  z-index: 1;
 }
 
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  z-index: -1;
-}
-
-/* --------------------
-   About Section
---------------------- */
+/* About Us section in white */
 .about {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.95); /* slightly transparent for elegance */
   color: #222;
   padding: 80px 20px;
   text-align: center;
@@ -88,7 +70,7 @@ nav a:hover {
 
 .about-container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .about h2 {
@@ -101,25 +83,22 @@ nav a:hover {
   line-height: 1.8;
 }
 
-/* --------------------
-   Cards
---------------------- */
+/* Interactive cards */
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 40px 20px;
   margin-top: 40px;
 }
 
 .card {
   background: white;
   border-radius: 20px;
-  width: 250px;
   padding: 20px;
+  width: 250px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
@@ -127,18 +106,16 @@ nav a:hover {
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-/* --------------------
-   Buttons
---------------------- */
+/* Buttons */
 .btn {
   display: inline-block;
+  background-color: #ffd43b;
   padding: 12px 24px;
   border-radius: 50px;
-  background-color: #ffd43b;
-  color: #222;
   font-weight: bold;
   text-decoration: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: #222;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .btn:hover {
@@ -146,11 +123,9 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* --------------------
-   Footer
---------------------- */
+/* Footer */
 footer {
   background-color: #ffd43b;
   padding: 20px;
-  margin-top: auto; /* Push footer to bottom */
+  margin-top: auto; /* pushes footer to bottom */
 }
